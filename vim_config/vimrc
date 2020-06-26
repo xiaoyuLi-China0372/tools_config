@@ -37,6 +37,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'davidhalter/jedi-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-scripts/indentpython.vim'
+"Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'zxqfl/tabnine-vim'
+Plug 'vim-scripts/DoxygenToolkit.vim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plug 'L9'
 " plugin from git not hosted on github
@@ -100,7 +103,26 @@ nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 " cancel syntastic check python
 let g:syntastic_ignore_files=['.*\.py$']
 
+"syntastic setting
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 2
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_enable_signs = 1
+"let g:syntastic_error_symbol = 'E'
+"let g:syntastic_warning_symbol = 'W'
+"let g:syntastic_enable_highlighting = 1
+"let g:syntastic_echo_current_error = 1
+"let g:syntastic_cpp_checkers = ['gcc']
+"let g:syntastic_c_checkers = ['gcc']
+"let g:syntastic_cpp_compiler = 'gcc'
+"let g:syntastic_cpp_compiler_options = '-std=c++11'
+
 " YouCompleteMe plugin config
+"let g:ycm_show_diagnostics_ui = 0
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0 "关闭加载.ycm_extra_conf.py提示
 let g:ycm_python_binary_path='/usr/bin/python3'
