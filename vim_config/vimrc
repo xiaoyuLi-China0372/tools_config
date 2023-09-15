@@ -22,7 +22,9 @@ syntax enable
 syntax on
 filetype plugin indent on
 autocmd FileType make set noexpandtab
-colorscheme desert_my
+"colorscheme desert_my
+colorscheme pablo
+inoremap hj <ESC>
 "call pathogen#infect()
 
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -37,6 +39,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'davidhalter/jedi-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'dense-analysis/ale'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 "Plug 'zxqfl/tabnine-vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
@@ -152,4 +155,8 @@ let g:ycm_filetype_blacklist = {
 \ 'taglist' : 1,
 \ 'nerdtree' : 1,
 \}
+
+" DoxygenToolkit plugin config
+let g:doxygenToolkit_authorName="Lixiaoyu"
+let g:doxygenToolkit_briefTag_funcName="yes"
 
